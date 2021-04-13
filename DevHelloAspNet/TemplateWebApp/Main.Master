@@ -41,6 +41,14 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
+            <asp:SiteMapPath ID="SmpSite" runat="server"></asp:SiteMapPath>
+            <%--<asp:Menu ID="MnuMain" runat="server" Orientation="vertical">
+                <Items>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/"></asp:MenuItem>
+                    <asp:MenuItem Text="About" Value="About" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Contact" Value="Contact" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                </Items>
+            </asp:Menu>--%>
             <hr />
         </div>
 

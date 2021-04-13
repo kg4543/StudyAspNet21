@@ -102,6 +102,7 @@
     <Content Include="Scripts\Scripts\jquery-3.4.1.min.map" />
     <Content Include="Scripts\Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\Scripts\README.md" />
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
