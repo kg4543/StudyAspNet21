@@ -13,7 +13,8 @@ namespace NetNote
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Write(StringLibrary.CutString("안녕하세요. 부경대학교입니다.",10));
+            //Response.Write(StringLibrary.CutString("안녕하세요. 부경대학교입니다.",10));
+            
         }
     }
 }
