@@ -34,5 +34,19 @@ namespace HelpersTest
             var actual = (5 + 5);
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void IsPhotoTest()
+        {
+            var imagePath = @"C:\Users\PKNU\Desktop\Source\Unity_Logo.png";
+            bool result = BoardLibrary.IsPhoto(imagePath);
+            Assert.IsTrue(result,"file extension must be png,jpg,gif");
+        }
+        [TestMethod]
+        public void IsNotPhotoTest()
+        {
+            var imagePath = @"C:\Users\PKNU\Desktop\Source\youtube.ico";
+            bool result = BoardLibrary.IsPhoto(imagePath);
+            Assert.IsFalse(result, "file extension must be png,jpg,gif");
+        }
     }
 }
