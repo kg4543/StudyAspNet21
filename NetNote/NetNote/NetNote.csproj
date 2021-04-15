@@ -126,6 +126,9 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Board\BoardList.aspx" />
+    <Content Include="Board\BoardView.aspx" />
+    <Content Include="Board\BoardWrite.aspx" />
+    <Content Include="Board\ImageText.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -317,6 +320,27 @@
     </Compile>
     <Compile Include="Board\BoardList.aspx.designer.cs">
       <DependentUpon>BoardList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Board\BoardView.aspx.cs">
+      <DependentUpon>BoardView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Board\BoardView.aspx.designer.cs">
+      <DependentUpon>BoardView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Board\BoardWrite.aspx.cs">
+      <DependentUpon>BoardWrite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Board\BoardWrite.aspx.designer.cs">
+      <DependentUpon>BoardWrite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Board\ImageText.aspx.cs">
+      <DependentUpon>ImageText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Board\ImageText.aspx.designer.cs">
+      <DependentUpon>ImageText.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>

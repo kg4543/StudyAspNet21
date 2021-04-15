@@ -71,4 +71,15 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="text-right">
+                    <a href="BoardWrite.aspx" class="btn btn-primary">글쓰기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </asp:Content>

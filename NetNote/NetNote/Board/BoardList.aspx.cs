@@ -17,6 +17,8 @@ namespace NetNote.Board
 
         public int RecordCount = 0;
 
+        public int PageIndex = 0; // 현재 보여줄 페이지 번호
+
         public BoardList()
         {
             _repo = new DbRepository(); //SqlConnection 생성
@@ -31,6 +33,21 @@ namespace NetNote.Board
 
             LblTotalRecord.Text = $"페이지 로드 수 : {RecordCount}";
 
+            if (Request["Page"] != null)
+            {
+                PageIndex = Convert.ToInt32(Request["Page"]) - 1;
+            }
+            else
+            {
+                PageIndex = 0;
+            }
+
+            // 쿠키 사용해서 리스트 페이지번호 유지
+
+            // 페이징 처리
+            PagingControl.PageIndex = PageIndex;
+            PagingControl.RecordCount = RecordCount;
+
             if (!Page.IsPostBack)
             {
                 DisplayData();
@@ -41,7 +58,7 @@ namespace NetNote.Board
         {
             if (!SearchMode)
             {
-                GrvNotes.DataSource = _repo.GetAll(0);
+                GrvNotes.DataSource = _repo.GetAll(PageIndex);
             }
 
             GrvNotes.DataBind(); // 데이터 바인딩 완료
