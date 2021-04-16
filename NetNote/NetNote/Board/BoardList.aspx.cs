@@ -14,6 +14,8 @@ namespace NetNote.Board
 
         // 검색 모드이면 true , 기본 fale
         public bool SearchMode { get; set; } = false;
+        public string SearchField { get; set; }
+        public string SearchQuery { get; set; }
 
         public int RecordCount = 0;
 
@@ -26,9 +28,22 @@ namespace NetNote.Board
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // 검색모드 결정 true 검색 false 기본
+            SearchMode = (!string.IsNullOrEmpty(Request["SearchField"])&&
+                          !string.IsNullOrEmpty(Request["SearchQuery"]));
+
+            if (SearchMode)
+            {
+                SearchField = Request["SearchField"];
+                SearchQuery = Request["SearchQuery"];
+            }
             if (!SearchMode)
             {
                 RecordCount = _repo.GetCountAll();
+            }
+            else
+            {
+                RecordCount = _repo.GetCountBySearch(SearchField, SearchQuery);
             }
 
             LblTotalRecord.Text = $"페이지 로드 수 : {RecordCount}";
@@ -59,6 +74,10 @@ namespace NetNote.Board
             if (!SearchMode)
             {
                 GrvNotes.DataSource = _repo.GetAll(PageIndex);
+            }
+            else
+            {
+                GrvNotes.DataSource = _repo.GetSeachAll(PageIndex, SearchField, SearchQuery);
             }
 
             GrvNotes.DataBind(); // 데이터 바인딩 완료

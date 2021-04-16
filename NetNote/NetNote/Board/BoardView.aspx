@@ -1,4 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="BoardView.aspx.cs" Inherits="NetNote.Board.BoardView" %>
+
+<%@ Register Src="~/Controls/CommentControl.ascx" TagPrefix="uc1" TagName="CommentControl" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h3 class="text-center">게시 글</h3>
     <span>글보기 - 상세보기</span>
@@ -83,8 +86,7 @@
             </tr>
             <tr>
                 <td colspan="4">
-                    <%--<uc1:BoardCommentControl runat="server" 
-                        ID="BoardCommentControl" />--%>
+                    <uc1:CommentControl runat="server" ID="CommentControl" />
                 </td>
             </tr>
         </tbody>
@@ -92,7 +94,7 @@
 
     <div style="text-align: center;">
         <asp:HyperLink ID="lnkDelete" runat="server" 
-            CssClass="btn btn-default">삭제</asp:HyperLink>
+            CssClass="btn btn-default" >삭제</asp:HyperLink>
         <asp:HyperLink ID="lnkModify" runat="server" 
             CssClass="btn btn-default">수정</asp:HyperLink>
         <asp:HyperLink ID="lnkReply" runat="server" 

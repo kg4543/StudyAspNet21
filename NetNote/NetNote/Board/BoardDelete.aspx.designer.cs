@@ -11,43 +11,52 @@ namespace NetNote.Board
 {
 
 
-    public partial class BoardList
+    public partial class BoardDelete
     {
 
         /// <summary>
-        /// LblTotalRecord 컨트롤입니다.
+        /// lblId 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal LblTotalRecord;
+        protected global::System.Web.UI.WebControls.Label lblId;
 
         /// <summary>
-        /// SearchControl 컨트롤입니다.
+        /// txtPassword 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::NetNote.Controls.SearchControl SearchControl;
+        protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// GrvNotes 컨트롤입니다.
+        /// btnDelete 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GrvNotes;
+        protected global::System.Web.UI.WebControls.Button btnDelete;
 
         /// <summary>
-        /// PagingControl 컨트롤입니다.
+        /// lnkCancel 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::NetNote.Controls.PagingControl PagingControl;
+        protected global::System.Web.UI.WebControls.HyperLink lnkCancel;
+
+        /// <summary>
+        /// lblMessage 컨트롤입니다.
+        /// </summary>
+        /// <remarks>
+        /// 자동 생성 필드입니다.
+        /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

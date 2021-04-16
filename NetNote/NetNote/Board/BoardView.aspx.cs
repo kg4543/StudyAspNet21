@@ -11,13 +11,15 @@ namespace NetNote.Board
     public partial class BoardView : System.Web.UI.Page
     {
         private string _Id; //게시글 번호
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             lnkDelete.NavigateUrl = $"BoardDelete.aspx?Id={Request["Id"]}";
-            lnkDelete.NavigateUrl = $"BoardModify.aspx?Id={Request["Id"]}";
-            lnkDelete.NavigateUrl = $"BoardReply.aspx?Id={Request["ID"]}";
+            lnkModify.NavigateUrl = $"BoardWrite.aspx?Id={Request["Id"]}&Mode=Edit";
+            lnkReply.NavigateUrl = $"BoardWrite.aspx?Id={Request["Id"]}&Mode=Reply";
 
             _Id = Request["Id"];
+
             if (_Id == null)
             {
                 Response.Redirect("BoardList.aspx");
@@ -58,6 +60,15 @@ namespace NetNote.Board
             lblHomepage.Text = $"<a href='{note.Homepage}' target='_blank'>{note.Homepage}</a>";
             lblPostDate.Text = note.PostDate.ToString();
             lblPostIP.Text = note.PostIp;
+
+            if (note.FileName.Length > 1)
+            {
+                lblFile.Text = $"{note.FileName} / 다운로드 {note.DownCount}";
+            }
+            else
+            {
+                lblFile.Text = "(None)";
+            }
         }
     }
 }
