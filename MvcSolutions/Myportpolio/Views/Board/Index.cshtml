@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Myportpolio.Models.Board>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<div class="col-lg col-md ml-auto mr-auto">
+    <div class="card card-login">
+        <div class="section section-contacts">
+            <div class="row">
+                <div class="col-md-11 ml-auto mr-auto">
+                    <h1 class="text-center title" style="color:black">Board</h1>
+                    <p>
+                        <a asp-action="Create">글쓰기</a>
+                    </p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Id)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Subject)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Writer)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.RegDate)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ReadCount)
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                             <tr>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.Id)
+                                </th>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Subject)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Writer)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.RegDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ReadCount)
+                                </td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@item.Id" >Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                </td>
+                            </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

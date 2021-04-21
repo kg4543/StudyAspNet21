@@ -3,9 +3,56 @@
     Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Phone Number</h1>
-    <p>010-4543-8127</p>
-    <h1 class="display-4">Email</h1>
-    <p>jyc351919@naver.com</p>
+<div class="col-lg col-md ml-auto mr-auto">
+    <div class="card card-login">
+        <div class="card-header card-header-primary text-center">
+            <h4 class="card-title">Contact</h4>
+            @*<div class="social-line">
+                <a href="#pablo" class="btn btn-just-icon btn-link">
+                    <i class="fa fa-facebook-square"></i>
+                </a>
+                <a href="#pablo" class="btn btn-just-icon btn-link">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#pablo" class="btn btn-just-icon btn-link">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </div>*@
+        </div>
+        <div class="section section-contacts">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    @*<h1 class="text-center title" style="color:black;">Contact</h1>*@
+                    <h4 class="text-center description">채용에 관심있으신 분은 여기로 연락바랍니다.</h4>
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">성함</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">이메일</label>
+                                    <input type="email" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleMessage" class="bmd-label-floating">메시지</label>
+                            <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 ml-auto mr-auto text-center">
+                                <button class="btn btn-primary btn-raised">
+                                    Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

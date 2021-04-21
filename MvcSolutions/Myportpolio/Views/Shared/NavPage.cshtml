@@ -1,4 +1,7 @@
-﻿<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor hca
+
+<nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
             <a class="navbar-brand" href="~/Home/Index">
@@ -24,36 +27,31 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">
+                    <a class="nav-link" asp-area="" asp-controller="Contacts" asp-action="Index">
                         <i class="material-icons">phone</i>Contact
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Board">
+                    <a class="nav-link" asp-area="" asp-controller="Board" asp-action="Index">
                         <i class="material-icons">dashboard_customize</i> Board
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Login">
+                @if (string.IsNullOrEmpty(hca.HttpContext.Session.GetString("UserEmail")))
+                 {
+                 <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">
                         <i class="material-icons">login</i> Login
                     </a>
+                 </li>
+                 }
+                else
+                {
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Logout">
+                        <i class="material-icons">logout</i> Logout (@hca.HttpContext.Session.GetString("UserEmail"))
+                    </a> 
                 </li>
-                @*<partial name="_LoginPartial"/>*@
-                @*<li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://twitter.com/CreativeTim" target="_blank" data-original-title="Follow us on Twitter" rel="nofollow">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank" data-original-title="Like us on Facebook" rel="nofollow">
-                            <i class="fa fa-facebook-square"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" target="_blank" data-original-title="Follow us on Instagram" rel="nofollow">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>*@
+                }
             </ul>
         </div>
     </div>
