@@ -7,10 +7,10 @@
 
 <div class="col-lg col-md ml-auto mr-auto">
     <div class="card card-login">
-        <div class="section section-contacts">
+        <div class="section section-contacts" style="padding: 20px 0px">
             <div class="row">
-                <div class="col-md-8 ml-auto mr-auto">
-                    <h1 class="text-center title" style="color:black">Board</h1>
+                <div class="col-md-11 ml-auto mr-auto">
+                    <h2 class="text-center" style="color:black; margin-top:0px; font-weight:bold">Board</h2>
                     <dl class="row">
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Subject)
@@ -22,7 +22,7 @@
                             @Html.DisplayNameFor(model => model.Contents)
                         </dt>
                         <dd class="col-sm-10">
-                            @Html.DisplayFor(model => model.Contents)
+                            @Html.Raw(Model.Contents)
                         </dd>
                         <dt class="col-sm-2">
                             @Html.DisplayNameFor(model => model.Writer)
@@ -44,8 +44,8 @@
                         </dd>
                     </dl>
                     <div>
-                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a> |
-                        <a asp-action="Index" class="btn btn-light">뒤로</a>
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">수정</a> |
+                        <a asp-action="Index" class="btn btn-light">리스트</a>
                     </div>
                 </div>
             </div>

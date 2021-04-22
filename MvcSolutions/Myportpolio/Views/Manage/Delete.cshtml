@@ -1,0 +1,50 @@
+﻿@model Myportpolio.Models.Manage
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+}
+
+<div class="col-lg col-md ml-auto mr-auto">
+    <div class="card card-login">
+        <div class="section section-contacts" style="padding: 20px 0px">
+            <div class="row">
+                <div class="col-md-11 ml-auto mr-auto">
+                    <h2 class="text-center" style="color:black; margin-top:0px; font-weight:bold">Board</h2>
+                    <dl class="row">
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Cate)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Cate)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Subject)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.Subject)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.Contents)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.Raw(Model.Contents)
+                        </dd>
+                        <dt class="col-sm-2">
+                            @Html.DisplayNameFor(model => model.RegDate)
+                        </dt>
+                        <dd class="col-sm-10">
+                            @Html.DisplayFor(model => model.RegDate)
+                        </dd>
+                    </dl>
+
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="submit" value="삭제" class="btn btn-danger" /> |
+                        <a asp-action="Index" class="btn btn-light">리스트</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -48,8 +48,13 @@
                 {
                 <li class="nav-item">
                     <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Logout">
-                        <i class="material-icons">logout</i> Logout (@hca.HttpContext.Session.GetString("UserEmail"))
+                        <i class="material-icons">logout</i> Logout @*(@hca.HttpContext.Session.GetString("UserEmail"))*@
                     </a> 
+                </li>
+                <li class="nva-item">
+                    <a class="nav-link" asp-area="" asp-controller="Manage" asp-action="Index" style="color:grey">
+                        <i class="material-icons" style="color:grey">settings</i> Admin
+                    </a>
                 </li>
                 }
             </ul>

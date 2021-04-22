@@ -27,7 +27,7 @@ namespace Myportpolio.Controllers
             var pageNumber = page ?? 1;
             var pageSize = 6;
 
-            var boards = _context.Boards.ToPagedList(pageNumber, pageSize);
+            var boards = await _context.Boards.ToPagedListAsync(pageNumber, pageSize);
             return View(boards);
         }
 
@@ -45,6 +45,12 @@ namespace Myportpolio.Controllers
             {
                 return NotFound();
             }
+
+
+            //ReadCount 증가
+            board.ReadCount += 1;
+            _context.Boards.Update(board);
+            _context.SaveChanges(); // Commit 중요
 
             return View(board);
         }
@@ -138,7 +144,6 @@ namespace Myportpolio.Controllers
             {
                 return NotFound();
             }
-
             return View(board);
         }
 

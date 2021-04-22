@@ -16,5 +16,6 @@ namespace Myportpolio.Data
         public DbSet<Myportpolio.Models.Contact> Contact { get; set; }
         public DbSet<Myportpolio.Models.Account> Account { get; set; }
         public DbSet<Myportpolio.Models.Board> Boards { get; set; }
+        public DbSet<Myportpolio.Models.Manage> Manages { get; set; }
     }
 }

@@ -4,35 +4,39 @@
     ViewData["Title"] = "Create";
     Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
+<script src="~/plugin/ckeditor_4.16.0_full/ckeditor/ckeditor.js"></script>
 
 <div class="col-lg col-md ml-auto mr-auto">
     <div class="card card-login">
-        <div class="section section-contacts">
+        <div class="section section-contacts" style="padding: 20px 0px">
             <div class="row">
                 <div class="col-md-11 ml-auto mr-auto">
-                    <h1 class="text-center title" style="color:black">Board</h1>
-                        <form asp-action="Create">
-                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                            <div class="form-group">
-                                <label asp-for="Subject" class="control-label"></label>
-                                <input asp-for="Subject" class="form-control" />
-                                <span asp-validation-for="Subject" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Writer" class="control-label"></label>
-                                <input asp-for="Writer" class="form-control" />
-                                <span asp-validation-for="Writer" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <label asp-for="Contents" class="control-label"></label>
-                                <textarea asp-for="Contents" class="form-control"></textarea>
-                                <span asp-validation-for="Contents" class="text-danger"></span>
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Create" class="btn btn-info" /> |
-                                <a asp-action="Index" class="btn btn-light">뒤로</a>
-                            </div>
-                        </form>
+                    <h2 class="text-center" style="color:black; margin-top:0px; font-weight:bold">Board</h2>
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="Subject" class="control-label"></label>
+                            <input asp-for="Subject" class="form-control" />
+                            <span asp-validation-for="Subject" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Writer" class="control-label"></label>
+                            <input asp-for="Writer" class="form-control" />
+                            <span asp-validation-for="Writer" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            @*<label asp-for="Contents" class="control-label"></label>
+                            <textarea asp-for="Contents" class="form-control"></textarea>*@
+                            @Html.LabelFor(model => model.Contents, new { @class = "control-label" })
+                            @Html.TextAreaFor(model => model.Contents,
+                                new { @id = "EditorContents", @class = "form-control", @rows = "8" })
+                            <script>CKEDITOR.replace("EditorContents")</script>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="저장" class="btn btn-info" /> |
+                            <a asp-action="Index" class="btn btn-light">리스트</a>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
