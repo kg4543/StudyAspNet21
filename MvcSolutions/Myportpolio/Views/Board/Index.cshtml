@@ -1,16 +1,20 @@
-﻿@model IEnumerable<Myportpolio.Models.Board>
+﻿@model IPagedList<Myportpolio.Models.Board>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_LoginLayout.cshtml";
 }
 
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common
+
 <div class="col-lg col-md ml-auto mr-auto">
     <div class="card card-login">
-        <div class="section section-contacts">
+        <div class="section section-contacts" style="padding: 20px 0px">
             <div class="row">
                 <div class="col-md-11 ml-auto mr-auto">
-                    <h1 class="text-center title" style="color:black">Board</h1>
+                    <h2 class="text-center" style="color:black; margin-top:0px; font-weight:bold">Board</h2>
                     <p>
                         <a asp-action="Create" class="btn btn-info">글쓰기</a>
                     </p>
@@ -18,19 +22,19 @@
                         <thead>
                             <tr>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Id)
+                                    @Html.DisplayNameFor(model => model.First().Id)
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Subject)
+                                    @Html.DisplayNameFor(model => model.First().Subject)
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.Writer)
+                                    @Html.DisplayNameFor(model => model.First().Writer)
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.RegDate)
+                                    @Html.DisplayNameFor(model => model.First().RegDate)
                                 </th>
                                 <th>
-                                    @Html.DisplayNameFor(model => model.ReadCount)
+                                    @Html.DisplayNameFor(model => model.First().ReadCount)
                                 </th>
                                 <th></th>
                             </tr>
@@ -63,6 +67,15 @@
                             }
                         </tbody>
                     </table>
+                    <div class="pull-center">
+                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index",new { page }),
+                       new PagedListRenderOptionsBase
+                       {
+                           LiElementClasses = new string[] { "page-item" },
+                           PageClasses = new string[] { "page-link" },
+                           Display = PagedListDisplayMode.IfNeeded
+                       })
+                    </div>
                 </div>
             </div>
         </div>
