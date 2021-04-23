@@ -5,7 +5,7 @@
 
 <body class="landing-page sidebar-collapse">
     @Html.Partial("NavPage.cshtml")
-    <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/profile_city.jpg')">
+    <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/background/background_sea.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -30,133 +30,90 @@
                         @RenderBody()
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-8 ml-auto mr-auto">
-                        <h2 class="title">My Story</h2>
-                        <h5 class="description" >
-                            1. 2011.03 ~ 2013.02: 부산 진고등학교 졸업 <br /> 
-                            2. 2013.03 ~ 2019.02: 경상대학교 전공: 산업공학 졸업<br />
-                            3. 2019.04 ~ 2020.12: 가방 공장 생산 관리자 in 베트남 <br />
-                            4. 2021.01 ~ 2021.08: IoT 개발자 과정 교육 수료(예정) <br />
-                        </h5>
-                </div>
-                <div class="features">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-info">
-                                    <i class="material-icons">badge</i>
+                
+
+                @*<div class="section text-center">
+                    <h2 class="title">Here is our team</h2>
+                    <div class="team">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="team-player">
+                                    <div class="card card-plain">
+                                        <div class="col-md-6 ml-auto mr-auto">
+                                            <img src="~/assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                        </div>
+                                        <h4 class="card-title">
+                                            Gigi Hadid
+                                            <br>
+                                            <small class="card-description text-muted">Model</small>
+                                        </h4>
+                                        <div class="card-body">
+                                            <p class="card-description">
+                                                You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                                                <a href="#">links</a> for people to be able to follow them outside the site.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+                                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
+                                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4 class="info-title">자격증</h4>
-                                <p>
-                                    1.
-                                    2.
-                                    3.
-                                </p>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-success">
-                                    <i class="material-icons">verified_user</i>
+                            <div class="col-md-4">
+                                <div class="team-player">
+                                    <div class="card card-plain">
+                                        <div class="col-md-6 ml-auto mr-auto">
+                                            <img src="~/assets/img/faces/christian.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                        </div>
+                                        <h4 class="card-title">
+                                            Christian Louboutin
+                                            <br>
+                                            <small class="card-description text-muted">Designer</small>
+                                        </h4>
+                                        <div class="card-body">
+                                            <p class="card-description">
+                                                You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                                                <a href="#">links</a> for people to be able to follow them outside the site.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+                                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4 class="info-title">Verified Users</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="info">
-                                <div class="icon icon-danger">
-                                    <i class="material-icons">fingerprint</i>
+                            <div class="col-md-4">
+                                <div class="team-player">
+                                    <div class="card card-plain">
+                                        <div class="col-md-6 ml-auto mr-auto">
+                                            <img src="~/assets/img/faces/kendall.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                                        </div>
+                                        <h4 class="card-title">
+                                            Kendall Jenner
+                                            <br>
+                                            <small class="card-description text-muted">Model</small>
+                                        </h4>
+                                        <div class="card-body">
+                                            <p class="card-description">
+                                                You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+                                                <a href="#">links</a> for people to be able to follow them outside the site.
+                                            </p>
+                                        </div>
+                                        <div class="card-footer justify-content-center">
+                                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
+                                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
+                                            <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h4 class="info-title">Fingerprint</h4>
-                                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*@
             </div>
-            @*<div class="section text-center">
-                <h2 class="title">Here is our team</h2>
-                <div class="team">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <div class="card card-plain">
-                                    <div class="col-md-6 ml-auto mr-auto">
-                                        <img src="~/assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                                    </div>
-                                    <h4 class="card-title">
-                                        Gigi Hadid
-                                        <br>
-                                        <small class="card-description text-muted">Model</small>
-                                    </h4>
-                                    <div class="card-body">
-                                        <p class="card-description">
-                                            You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                            <a href="#">links</a> for people to be able to follow them outside the site.
-                                        </p>
-                                    </div>
-                                    <div class="card-footer justify-content-center">
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <div class="card card-plain">
-                                    <div class="col-md-6 ml-auto mr-auto">
-                                        <img src="~/assets/img/faces/christian.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                                    </div>
-                                    <h4 class="card-title">
-                                        Christian Louboutin
-                                        <br>
-                                        <small class="card-description text-muted">Designer</small>
-                                    </h4>
-                                    <div class="card-body">
-                                        <p class="card-description">
-                                            You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                            <a href="#">links</a> for people to be able to follow them outside the site.
-                                        </p>
-                                    </div>
-                                    <div class="card-footer justify-content-center">
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="team-player">
-                                <div class="card card-plain">
-                                    <div class="col-md-6 ml-auto mr-auto">
-                                        <img src="~/assets/img/faces/kendall.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                                    </div>
-                                    <h4 class="card-title">
-                                        Kendall Jenner
-                                        <br>
-                                        <small class="card-description text-muted">Model</small>
-                                    </h4>
-                                    <div class="card-body">
-                                        <p class="card-description">
-                                            You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                                            <a href="#">links</a> for people to be able to follow them outside the site.
-                                        </p>
-                                    </div>
-                                    <div class="card-footer justify-content-center">
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                        <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>*@
         </div>
     </div>
     @Html.Partial("FooterPage.cshtml")

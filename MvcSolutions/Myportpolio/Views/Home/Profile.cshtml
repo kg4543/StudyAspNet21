@@ -4,28 +4,95 @@
     Layout = "~/Views/Shared/_ProfileLayout.cshtml";
 }
 
-@Html.Raw(Model.Contents)
+@*@Html.Raw(Model.Contents)*@
 
-@*
-    <div class="row">
-        <div class="col-md-6 ml-auto mr-auto">
-            <div class="profile">
-                <div class="avatar">
-                    <img src="~/assets/img/faces/mon.jfif" alt="Circle Image" class="img-raised rounded-circle img-fluid">
-                </div>
-                <div class="name">
-                    <h3 class="title">GG Kim</h3>
-                    <h6>Progrmer</h6>
-                    <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
-                    <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
-                    <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+        <div class="row">
+            <div class="col-md-6 ml-auto mr-auto"  >
+                <div class="profile">
+                    <div class="avatar"><img alt="Circle Image" class="img-raised rounded-circle img-fluid" src="/assets/img/faces/mon.jfif" /></div>
+                    <div class="name">
+                        <h3 class="title">GG Kim</h3>
+                        <h6>Progrmer</h6>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="description text-center">
-        <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
-    </div>
-    <div class="col-md-6 ml-auto mr-auto">
-    </div>*@
+        <div class="row" style="justify-content:center;align-items:center">
+            <div class="col-md-8 ml-auto mr-auto" style="text-align:center">
+                <h2 class="title">My Story</h2>
+                <h5 class="description">
+                    1. 2011.03 ~ 2013.02: 부산 진고등학교 졸업 <br />
+                    2. 2013.03 ~ 2019.02: 경상대학교 전공: 산업공학 졸업<br />
+                    3. 2019.04 ~ 2020.12: 가방 공장 생산 관리자 in 베트남 <br />
+                    4. 2021.01 ~ 2021.08: IoT 개발자 과정 교육 수료(예정) <br />
+                </h5>
+            </div>
+            <div class="features">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="info">
+                            <div class="icon icon-info">
+                                <i class="material-icons">build</i>
+                            </div>
+                            <h4 class="info-title">Skill</h4>
+                            <p>
+                                1. C# (Winform / WPF) <br />
+                                2. WEB (ASP.NET / HTML/CSS/JS) <br />
+                                3. DBMS (MSSQL) <br />
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info">
+                            <div class="icon icon-success">
+                                <i class="material-icons">badge</i>
+                            </div>
+                            <h4 class="info-title">License</h4>
+                            <p>
+                                1.OCJP <br />
+                                2.품질경영기사 <br />
+                                3.정보처리기사 따고 싶다
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="info">
+                            <div class="icon icon-danger">
+                                <i class="material-icons">dns</i>
+                            </div>
+                            <h4 class="info-title">Project</h4>
+                            <p>
+                                1. Book Rental Shop <br />
+                                2. Stock Manage System <br />
+                                3. Portfolio Web Page <br />
+                                4. Favorite Movie Selector
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="~/assets/img/faces/mon.jfif" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                        </div>
+                        <div class="name">
+                            <h3 class="title">GG Kim</h3>
+                            <h6>Progrmer</h6>
+                            <a href="#pablo" class="btn btn-just-icon btn-link btn-dribbble"><i class="fa fa-dribbble"></i></a>
+                            <a href="#pablo" class="btn btn-just-icon btn-link btn-twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#pablo" class="btn btn-just-icon btn-link btn-pinterest"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="description text-center">
+                <p>An artist of considerable range, Chet Faker &#x2014; the name taken by Melbourne-raised, Brooklyn-based Nick Murphy &#x2014; writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
+            </div>
+            <div class="col-md-6 ml-auto mr-auto">
+            </div>*@
 
