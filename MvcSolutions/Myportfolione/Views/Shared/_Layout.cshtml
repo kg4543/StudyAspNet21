@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+@Html.Partial("HeadPage.cshtml")
+
+
+<body id="page-top">
+    @Html.Partial("NavPage.cshtml")
+    <!-- Main -->
+    @RenderBody()
+
+    <!-- PreView-->
+    @Html.Partial("PreviewPage.cshtml")
+
+    <!-- Profile-->
+    @Html.Partial("ProfilePage.cshtml")
+
+    <!-- Portfolio-->
+    @Html.Partial("PortfolioPage.cshtml")
+
+    <!-- Call to action-->
+    <section class="page-section bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">GitHub</h2>
+            <a class="btn btn-light btn-xl" href="https://github.com/kg4543">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Contact-->
+    @Html.Partial("ContactPage.cshtml")
+
+    <!-- Footer-->
+    @Html.Partial("FooterPage.cshtml")
+
+    <!-- Bootstrap core JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
