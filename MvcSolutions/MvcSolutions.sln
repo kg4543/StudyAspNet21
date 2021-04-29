@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Myportpolio", "Myportpolio\
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TotalDatabase", "TotalDatabase\TotalDatabase.sqlproj", "{70EF8EB2-8563-4FD5-8292-E747ED57D768}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Myportfolione", "Myportfolione\Myportfolione.csproj", "{FB9BCBF9-5DB8-4BC8-A688-EBFEE958AF30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Myportfolione", "Myportfolione\Myportfolione.csproj", "{FB9BCBF9-5DB8-4BC8-A688-EBFEE958AF30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KimSite", "KimSite\KimSite.csproj", "{06166B6B-C066-4687-801C-8D6F3D995DE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{FB9BCBF9-5DB8-4BC8-A688-EBFEE958AF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB9BCBF9-5DB8-4BC8-A688-EBFEE958AF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB9BCBF9-5DB8-4BC8-A688-EBFEE958AF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06166B6B-C066-4687-801C-8D6F3D995DE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06166B6B-C066-4687-801C-8D6F3D995DE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06166B6B-C066-4687-801C-8D6F3D995DE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06166B6B-C066-4687-801C-8D6F3D995DE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
